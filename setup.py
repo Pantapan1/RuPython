@@ -1,13 +1,13 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name='rpython-lang',
     version='0.4.0',
     description='Русский Python — пиши код на русском языке',
-    packages=find_packages(),
+    py_modules=['transpiler'],
     entry_points={
         'console_scripts': [
-            'rpython=rpython.transpiler:main',
+            'ruspy=transpiler:main',
         ],
     },
     python_requires='>=3.6',
